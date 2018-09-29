@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i');
+
+.head1{
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
+  margin-top: 250px;
+  font-size: 50px;
+  float: right;
+}
+
+.head2{
+  margin-left: 100px;
+  color: white;
+  font-family: "Arial Rounded MT Bold";
+}
+
+
+
+
+
+.head3{
+  margin-top: 50px;
+  color: darkorange;
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.img{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  background-image: url('./../assets/background.jpg');
+  background-size: auto;
+  padding-top: 50px;
+}
+
+.firstcell{
+  margin-left: 90px;
+  margin-top: 50px;
+}
+
+.frontimage{
+  background-image: url('./../assets/background.jpg');
+  background-size: auto;
+  width: 100%;
+}
+
+.bg2{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  background-image: url('./../assets/bg2.png');
+  background-size: auto;
+  align-content: center;
+  justify-content: center;
+}
+
+.bottomImage{
+  background-image: url('./../assets/endbg.png');
+  background-size: auto;
+}
+
+.mobile{
+  margin-left: 200px;
+}
+
+
+.ending {
+  font-size: 15px;
+  color: blue;
+  text-align: center;
+  font-family: "WorkSans";
+  color: rgb(34, 80, 129);
+}
+
+.textcenter{
+  margin-left: 150px;
+  margin-right: 50px;
+  padding-top: 70px;
+}
+
+
+.centerimages{
+  margin-left: 20px;
+  margin-top: 50px;
+}
+
+.parasilver{
+  margin-top: 30px;
+  color: #7f828b;
+}
+.orangehead{
+  float: right;
+  margin-top: 200px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 50px;
+}
+.orangehead2{
+  margin-left: 200px;
+  float: right;
+  margin-top: 20px;
+  font-size: 20px;
+  color: rgba(113, 115, 126, 0.99);
+}
+
+
+.orange{
+  color: #ff9e07;
+}
+
+.margindouble{
+  margin-top: 30px;
+}
+
+.reactnativetemplate{
+  margin-top: 100px;
+  margin-left: 100px;
+}
+
+.reactnativetext{
+  margin-top: 350px;
+}
+.textmarginreactnative{
+  margin-right: 30px;
+  margin-top: 150px;
+}
+.unlimitedproductstext{
+  margin-top: 100px;
+  float: right;
+  font-size: 45px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.paymentgateways{
+  margin-top: 200px;
+  margin-left: 80px;
+}
+.alligning{
+  float: right;
+}
+
+.cardstemplate{
+  border: 2px solid black;
+  margin-left: 30px;
+  width: 600px;
+  border-top-color: orange;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+}
+.package{
+  background: #FFFFFF;
+  border-top: 5px solid darkorange;
+  border-radius: 8px;
+  box-shadow: 0 5px 25px -13px rgb(0, 0, 0);
+}
+
+.package {
+  padding-bottom: 200px;
+}
+
+.package .package-content h4{
+  text-align: center;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
+.package .package-content button{
+  align-content: center;
+  margin-left: 200px;
+  background-color: rgb(255, 144, 23);
+  font-size: 20px;
+  width: 184px;
+  height: 50px;
+  margin-top: 30px;
+  color: white;
+  border-radius: 20px;
+}
+
+
+.package .package-content {
+  align-content: center;
+  align-items: center;
+}
+
+.package .package-content ul{
+  margin: 0;
+  padding-bottom: 100px;
+  padding-top: 30px;
+  list-style: none;
+}
+.package .package-content ul li{
+  text-align: center;
+
+}
+.package .package-content p{
+  text-align: center;
+  color: darkorange;
+  font-size: 70px;
+  font-family: 'Ubuntu', sans-serif;;
+}
+.logotradebakerz{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+  margin-top: 30px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.contactus{
+  margin-top: 70px;
+}
+
+
+.bgpink{
+  background-image: url('./../assets/pinkbg.png');
+  background-size: auto;
+}
+.logofront{
+  margin-top: 50px;
+  width: 250px;
+  margin-left: 110px;
+}
+.bgunlimitedproducts{
+  background-image: url('./../assets/circle2.png');
+  background-repeat: no-repeat;
+  background-position-x: 50px;
+  background-size: auto
+}
+.appleandgoogle{
+  margin-top: 90px;
+  margin-bottom: 90px;
+}
+.formpad{
+  margin-top: 80px;
+  margin-right: 50px;
+}
+
+.bgscreenshots{
+  background-image: url('./../assets/screenshotbackgroun.png');
+  background-size: 1300px 600px;
+  background-repeat: no-repeat;
+  margin-top: 50px;
+  background-position-x: 35px;
+  background-position-y: 105px;
+}
+
+.bgorange{
+  background-color: orangered;
+  align-content: center;
+  align-items: center;
+}
+
+.links{
+  float: right;
+  color: white;
+}
+
+.bg3for3{
+  background-image: url('./../assets/bg3for3.png');
+  background-size: auto;
+  background-repeat: no-repeat;
+  margin-top: 50px;
+}
+
+.paddingimagesthree{
+  margin-left: 40px;
+}
+
+.screenshots{
+  text-align: center;
+}
+
+.bg3head{
+  margin-top: 50px;
+}
+
+.googlefont{
+  font-size: 50px;
+  font-family: 'Ubuntu', sans-serif;
+}
+.unlimitedproductspara{
+  margin-top: 30px;
+  float: right;
+  margin-left: 200px;
+  font-size: 20px;
+  color: #7d818d;
+}
+
+.textgooglenormal{
+  font-family: 'Ubuntu normal', sans-serif;
+  font-size: 40px;
+}
+
+.reactnativetemplateimage{
+  background-image: url('./../assets/bg4.png');
+  background-size: auto;
+  background-position-y: 100px;
+  background-repeat: no-repeat;
+}
+.contactheading{
+  font-size: 50px;
+  font-family: 'Ubuntu', sans-serif;
+  color: #2e468c;
+}
+.customButton{
+  background-color: rgb(34, 80, 129);
+  width: 400px;
+  height: 45px;
+  border-radius: 20px;
+  margin-top: 30px;
+}
+
+.roundinput{
+  border-radius: 20px;
+}
+
+.bgintuitive{
+  background-image: url('./../assets/circle2.png');
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position-x: -300px;
+
+}
+
+.packgaes-head{
+  text-align: center;
+  margin-bottom: 100px;
+}
+.about-us{
+  text-align: center;
+  margin-top: 50px;
+}
+.about-us h1{
+  color: orange;
+  font-family: 'Ubuntu', sans-serif;
+  padding-bottom: 50px;
+}
