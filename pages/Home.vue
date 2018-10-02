@@ -1,7 +1,19 @@
 <template>
-
   <div>
-    <div class="frontimage" >
+
+    <div
+      id="top"
+      class="frontimage js-cd-top">
+
+      <div style="color: white; position: fixed">
+        Window width: {{ windowWidth }}
+        <br> Window height: {{ windowHeight }}
+      </div>
+
+      <!--<b-button-->
+      <!--id="buttonfade"-->
+      <!--@click="scrollSmoothToBottom"> bottom-->
+      <!--</b-button>-->
       <b-container>
         <b-row>
           <b-col
@@ -21,7 +33,7 @@
             md="6"
           >
             <div
-              style="padding-top: 50px"
+              style="padding-top: 80px"
               @mouseover="upHere = true"
               @mouseleave="upHere = false">
               <b-link
@@ -74,7 +86,7 @@
         class="centerimages"
         style="padding-bottom: 50px">
         <b-col
-          md="12"
+          md="4"
           lg="4"
           sm="12"
         >
@@ -83,13 +95,14 @@
               src="./../assets/workfromeverywhere.png"
               class="small"
               style="padding-left: 50px; width: 120px; margin-top: 10px"> <img> <br><br>
-            <h6 class="bg3head"> Work From Everywhere </h6>
-            <p class="parasilver"> Lorem ipsum dolor sit amet, labore et dolore magna aliqua. Ut enim ad minim veniam,  </p>
           </div>
+          <h6 class="bg3head"> Work From Everywhere </h6>
+          <p class="parasilver"> Lorem ipsum dolor sit amet, labore et dolore magna aliqua. Ut enim ad minim veniam,  </p>
+
         </b-col>
 
         <b-col
-          md="12"
+          md="4"
           lg="4"
           sm="12"
         >
@@ -98,14 +111,14 @@
               src="./../assets/manageschedule.png"
               class="small"
               style="padding-left: 50px; width: 120px; margin-top: 10px"> <img> <br><br>
-            <h6 class="bg3head"> Manage Your Schedule </h6>
-            <p class="parasilver"> Lorem ipsum dolor sit amet, consectetur labore et dolore magna aliqua. Ut enim ad minim veniam,   </p>
           </div>
+          <h6 class="bg3head"> Manage Your Schedule </h6>
+          <p class="parasilver"> Lorem ipsum dolor sit amet, consectetur labore et dolore magna aliqua. Ut enim ad minim veniam,   </p>
         </b-col>
 
 
         <b-col
-          md="12"
+          md="4"
           lg="4"
           sm="12">
           <div class="bg3for3">
@@ -113,9 +126,10 @@
               src="./../assets/increase.png"
               class="small"
               style="padding-left: 40px; width: 120px; margin-top: 10px"> <img> <br>
-            <h6 class="bg3head"> Increase Your Work Rates </h6>
-            <p class="parasilver"> Lorem ipsum dolor sit labore et dolore amet, labore et dolore magna aliqua. Ut enim ad minim veniam,   </p>
           </div>
+          <h6 class="bg3head"> Increase Your Work Rates </h6>
+          <p class="parasilver"> Lorem ipsum dolor sit labore et dolore amet, labore et dolore magna aliqua. Ut enim ad minim veniam,   </p>
+
         </b-col>
       </b-row>
     </b-container>
@@ -136,7 +150,7 @@
             </div>
           </b-col>
           <b-col>
-            <div>
+            <div class="intuitive-image">
               <img
                 src="./../assets/doublecell.png"
                 width="100%"
@@ -149,26 +163,29 @@
     </div>
 
 
-
-    <div class="reactnativetemplateimage">
+    <div
+      class="reactnativetemplateimage"
+      style="padding-bottom: 50px">
       <div>
         <b-container>
           <b-row >
-            <b-col>
-              <div>
+            <b-col lg="6">
+              <div class="reactNative-image">
                 <img
                   src="./../assets/reactnativetempimage1.png"
-                  width="200"
-                  height="400">
+                  width="240px"
+                  height="500px"
+                >
                 <img>
                 <img
                   src="./../assets/reactnativetempimage2.png"
-                  width="200"
-                  height="400">
+                  width="250px"
+                  height="520px">
                 <img>
               </div>
             </b-col>
-            <b-col>
+            <b-col
+              lg="6">
               <div class="textmarginreactnative">
                 <h2 >
                   <span class="orange reactnativetext googlefont"> <b> REACT NATIVE </b> </span> <br> <b class="textgooglenormal"> TEMPLATE </b>
@@ -220,26 +237,27 @@
 
     <div>
       <b-container>
-        <b-row>
-          <div>
-            <b-col>
-              <img
-                src="./../assets/paymentgateway.png"
-                width="100%"><img>
-            </b-col>
-          </div>
+        <b-row class="paymentgateways">
+          <b-col
+            lg="6"
+            sm="12"
+            md="6">
+            <img
+              src="./../assets/paymentgateway.png"
+              width="80%"><img>
+          </b-col>
 
-          <div>
-            <b-col
-              class="paymentgateways">
+          <b-col
+            lg="6"
+            sm="12"
+            md="6">
+            <div>
               <h1> <span
                 class="googlefont"
                 style="color: #ff9c2f">  PAYMENT </span>  <Span class="textgooglenormal"> GATEWAYS </Span> </h1>
-              <p> There are many variations of passages of Lorem Ipsum available,</p>
-              <p> There are many variations of passages of Lorem Ipsum available,</p>
-              <p> There are many variations of passages of Lorem Ipsum available,</p>
-            </b-col>
-          </div>
+              <p> There are many variations of passages of Lorem Ipsum available There are many variations of passages of Lorem Ipsum available There are many variations of passages of Lorem Ipsum available</p>
+            </div>
+          </b-col>
         </b-row>
       </b-container>
     </div>
@@ -355,10 +373,10 @@
           <b-row>
             <b-col
               md="6"
-              sm="6">
+              sm="12">
               <img
                 src="./../assets/mapphone.png"
-                class="mobile">
+                width="90%">
               <img>
             </b-col>
 
@@ -370,7 +388,7 @@
 
                 <b-col
                   md="6"
-                  sm="6">
+                  sm="12">
                   <label>
                     <b-form-input
                       type="text"
@@ -426,6 +444,14 @@
       <p class="ending"> © 2018 All Rights Reserved </p>
     </div>
 
+    <!--<b-button @click="topFunction"> top </b-button>-->
+
+    <div>
+      <a
+        href="#top"
+        class="cd-top js-cd-top topbutton">Top  </a>
+    </div>
+
 
 
   </div>
@@ -437,20 +463,138 @@
 
   import Navbar from './Navbar.vue';
 
-  export default{
-    components:{
+  export default {
+    components: {
       Navbar
     },
     data() {
       return {
-        upHere: false
+        msg: 'Hello World! This is a Event listener test.',
+        windowWidth: 0,
+        windowHeight: 0,
       }
-    }
+    },
+
+    mounted() {
+      this.$nextTick(function() {
+        window.addEventListener('resize', this.getWindowWidth);
+        window.addEventListener('resize', this.getWindowHeight);
+
+        //Init
+        this.getWindowWidth()
+        this.getWindowHeight()
+      }),
+
+
+
+
+        (function(){
+          // Back to Top - by CodyHouse.co
+          var backTop = document.getElementsByClassName('js-cd-top')[0],
+            // browser window scroll (in pixels) after which the "back to top" link is shown
+            offset = 300,
+            //browser window scroll (in pixels) after which the "back to top" link opacity is reduced
+            offsetOpacity = 1200,
+            scrollDuration = 700,
+            scrolling = false;
+          if( backTop ) {
+            //update back to top visibility on scrolling
+            window.addEventListener("scroll", function(event) {
+              if( !scrolling ) {
+                scrolling = true;
+                (!window.requestAnimationFrame) ? setTimeout(checkBackToTop, 250) : window.requestAnimationFrame(checkBackToTop);
+              }
+            });
+            //smooth scroll to top
+            backTop.addEventListener('click', function(event) {
+              event.preventDefault();
+              (!window.requestAnimationFrame) ? window.scrollTo(0, 0) : scrollTop(scrollDuration);
+            });
+          }
+
+          function checkBackToTop() {
+            var windowTop = window.scrollY || document.documentElement.scrollTop;
+            ( windowTop > offset ) ? addClass(backTop, 'cd-top--show') : removeClass(backTop, 'cd-top--show', 'cd-top--fade-out');
+            ( windowTop > offsetOpacity ) && addClass(backTop, 'cd-top--fade-out');
+            scrolling = false;
+          }
+
+          function scrollTop(duration) {
+            var start = window.scrollY || document.documentElement.scrollTop,
+              currentTime = null;
+
+            var animateScroll = function(timestamp){
+              if (!currentTime) currentTime = timestamp;
+              var progress = timestamp - currentTime;
+              var val = Math.max(Math.easeInOutQuad(progress, start, -start, duration), 0);
+              window.scrollTo(0, val);
+              if(progress < duration) {
+                window.requestAnimationFrame(animateScroll);
+              }
+            };
+
+            window.requestAnimationFrame(animateScroll);
+          }
+
+          Math.easeInOutQuad = function (t, b, c, d) {
+            t /= d/2;
+            if (t < 1) return c/2*t*t + b;
+            t--;
+            return -c/2 * (t*(t-2) - 1) + b;
+          };
+
+          //class manipulations - needed if classList is not supported
+          function hasClass(el, className) {
+            if (el.classList) return el.classList.contains(className);
+            else return !!el.className.match(new RegExp('(\\s|^)' + className + '(\\s|$)'));
+          }
+          function addClass(el, className) {
+            var classList = className.split(' ');
+            if (el.classList) el.classList.add(classList[0]);
+            else if (!hasClass(el, classList[0])) el.className += " " + classList[0];
+            if (classList.length > 1) addClass(el, classList.slice(1).join(' '));
+          }
+          function removeClass(el, className) {
+            var classList = className.split(' ');
+            if (el.classList) el.classList.remove(classList[0]);
+            else if(hasClass(el, classList[0])) {
+              var reg = new RegExp('(\\s|^)' + classList[0] + '(\\s|$)');
+              el.className=el.className.replace(reg, ' ');
+            }
+            if (classList.length > 1) removeClass(el, classList.slice(1).join(' '));
+          }
+        })();
+
+
+
+
+    },
+    beforeDestroy() {
+      window.removeEventListener('resize', this.getWindowWidth);
+      window.removeEventListener('resize', this.getWindowHeight);
+    },
+
+      methods: {
+
+        getWindowWidth(event) {
+          this.windowWidth = document.documentElement.clientWidth;
+        },
+
+        getWindowHeight(event) {
+          this.windowHeight = document.documentElement.clientHeight;
+        },
+
+        topFunction: function () {
+          document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        },
+
+        scrollSmoothToBottom: function () {
+          window.scrollTo(0, 800);
+        },
+      },
+
   }
 </script>
-
-
-
 
 
 <style>
@@ -458,35 +602,26 @@
   @import url('https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i');
   @import url('https://fonts.googleapis.com/css?family=Work+Sans');
 
+  #delay{
+    transition-delay: 2s;
+  }
+
+
+  .topbutton{
+    position: fixed;
+    background-color: silver;
+    color: white;
+    bottom: 0px;
+    right: 0;
+    border-radius: 50%;
+  }
+
   .head1{
     color: white;
     font-family: 'Ubuntu', sans-serif;
     padding-top: 250px;
     font-size: 45px;
     text-align: center;
-  }
-
-  .head2{
-    margin-left: 100px;
-    color: white;
-    font-family: "Arial Rounded MT Bold";
-  }
-
-  .head3{
-    margin-top: 50px;
-    color: darkorange;
-    text-align: center;
-    font-size: 30px;
-    font-family: 'Ubuntu', sans-serif;
-  }
-
-  .img{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    background-image: url('./../assets/background.jpg');
-    background-size: auto;
-    padding-top: 50px;
   }
 
   .firstcell{
@@ -523,23 +658,12 @@
     width: 100%;
   }
 
-  .mobile{
-    float: left;
-  }
-
-
   .ending {
     font-size: 15px;
     color: blue;
     text-align: center;
     font-family: 'Work Sans', sans-serif;
     color: rgb(34, 80, 129);
-  }
-
-  .textcenter{
-    margin-left: 150px;
-    margin-right: 50px;
-    padding-top: 70px;
   }
 
 
@@ -575,11 +699,6 @@
     padding-top: 50px;
   }
 
-  .reactnativetemplate{
-    margin-top: 100px;
-    /*margin-left: 100px;*/
-  }
-
   .reactnativetext{
     margin-top: 350px;
   }
@@ -596,25 +715,8 @@
 
   .paymentgateways{
     padding-top: 150px;
-
-  }
-  .alligning{
-    float: right;
   }
 
-  .cardstemplate{
-    border: 2px solid black;
-    margin-left: 30px;
-    width: 600px;
-    border-top-color: orange;
-  }
-
-  .centered {
-    position: absolute;
-    top: 50%;
-    left: 60%;
-    transform: translate(-50%, -50%);
-  }
   .package{
     background: #FFFFFF;
     border-top: 5px solid darkorange;
@@ -631,8 +733,9 @@
   }
 
   .package .package-content button{
-    align-content: center;
-    margin-left: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     background-color: rgb(255, 144, 23);
     font-size: 20px;
     width: 150px;
@@ -695,14 +798,8 @@
     width: 100%;
   }
 
-  .appleandgoogle{
-    margin-top: 90px;
-    margin-bottom: 90px;
-  }
-
   .formpad{
-    margin-top: 80px;
-    margin-right: 50px;
+    margin-top: 50px;
   }
 
   .bgscreenshots{
@@ -714,16 +811,6 @@
     background-position-y: 105px;
   }
 
-  .bgorange{
-    background-color: orangered;
-    align-content: center;
-    align-items: center;
-  }
-
-  .links{
-    float: right;
-    color: white;
-  }
 
   .bg3for3{
     background-image: url('./../assets/bg3for3.png');
@@ -733,9 +820,6 @@
     width: 50%;
   }
 
-  .paddingimagesthree{
-    margin-left: 40px;
-  }
 
   .screenshots{
     text-align: center;
@@ -762,6 +846,13 @@
     font-size: 40px;
   }
 
+  .reactnative-image img{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+
   .reactnativetemplateimage{
     background-image: url('./../assets/bg4.png');
     background-size: auto;
@@ -772,11 +863,11 @@
     font-size: 50px;
     font-family: 'Ubuntu', sans-serif;
     color: #2e468c;
+    text-transform: uppercase;
   }
   .customButton{
     background-color: rgb(34, 80, 129);
-    width: 80%;
-    height: 45px;
+    width: 100%;
     border-radius: 20px;
     margin-top: 30px;
     text-align: center;
@@ -849,29 +940,6 @@
       text-align: center;
     }
 
-    .head2{
-      margin-left: 100px;
-      color: white;
-      font-family: "Arial Rounded MT Bold";
-    }
-
-    .head3{
-      margin-top: 50px;
-      color: darkorange;
-      text-align: center;
-      font-size: 30px;
-      font-family: 'Ubuntu', sans-serif;
-    }
-
-    .img{
-      display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      background-image: url('./../assets/background.jpg');
-      background-size: auto;
-      padding-top: 50px;
-    }
-
     .firstcell{
       padding-top: 150px;
       width: 100%;
@@ -907,11 +975,6 @@
       padding-bottom: 0px;
     }
 
-    .mobile{
-      align-items: center;
-      align-content: center;
-    }
-
 
     .ending {
       font-size: 15px;
@@ -921,21 +984,19 @@
       color: rgb(34, 80, 129);
     }
 
-    .textcenter{
-      margin-left: 150px;
-      margin-right: 50px;
-      padding-top: 70px;
-    }
+
 
 
     .centerimages{
-      /*margin-left: 20px;*/
+      margin-left: 0px;
       margin-top: 50px;
     }
 
     .parasilver{
       margin-top: 30px;
       text-align: center;
+      margin-left: auto;
+      margin-right: auto;
       color: #7f828b;
 
     }
@@ -959,22 +1020,25 @@
       color: #ff9e07;
     }
 
-    .margindouble{
-      padding-top: 50px;
-      width: 250px
+
+    .intuitive-image{
+       display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    .reactnativetemplate{
-      margin-top: 100px;
-      /*margin-left: 100px;*/
+
+    .margindouble{
+      width: 350px;
     }
 
     .reactnativetext{
-      margin-top: 350px;
+      margin-top: 370px;
     }
     .textmarginreactnative{
       text-align: center;
       margin-top: 20px;
+      margin-right: 0px;
     }
     .unlimitedproductstext{
       margin-top: 100px;
@@ -989,30 +1053,13 @@
       padding-bottom: 100px;
       padding-top: 0px;
     }
-    .alligning{
-      float: right;
-    }
 
-    .cardstemplate{
-      border: 2px solid black;
-      margin-left: 30px;
-      width: 600px;
-      border-top-color: orange;
-    }
-
-    .centered {
-      position: absolute;
-      top: 50%;
-      left: 60%;
-      transform: translate(-50%, -50%);
-    }
     .package{
       background: #FFFFFF;
       border-top: 5px solid darkorange;
       border-radius: 8px;
       box-shadow: 0 5px 25px -13px rgb(0, 0, 0);
       width: 100%;
-
     }
 
     .package .package-content h4{
@@ -1022,7 +1069,9 @@
     }
 
     .package .package-content button{
-      align-content: center;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
       background-color: rgb(255, 144, 23);
       font-size: 10px;
       width: 100px;
@@ -1042,10 +1091,10 @@
       padding-bottom: 100px;
       padding-top: 30px;
       list-style: none;
+      padding-left: 0px;
     }
     .package .package-content ul li{
       text-align: center;
-
     }
     .package .package-content p{
       text-align: center;
@@ -1057,14 +1106,19 @@
       display: block;
       margin-left: auto;
       margin-right: auto;
-      margin-top: 30px;
-      padding-top: 50px;
+      margin-top: 20px;
+      padding-top: 30px;
+      padding-bottom: 10px;
     }
 
     .contactus{
-      margin-top: 70px;
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: 0px;
+      padding-right: 0px;
+      width: 300px;
     }
-
 
     .bgpink{
       background-image: url('./../assets/pinkbg.png');
@@ -1082,16 +1136,6 @@
       width: 100%;
     }
 
-    .appleandgoogle{
-      margin-top: 90px;
-      margin-bottom: 90px;
-    }
-
-    .formpad{
-      margin-top: 80px;
-      margin-right: 50px;
-    }
-
     .bgscreenshots{
       background-image: url('./../assets/screenshotbackgroun.png');
       background-size: auto;
@@ -1101,28 +1145,11 @@
       background-position-y: 105px;
     }
 
-    .bgorange{
-      background-color: orangered;
-      align-content: center;
-      align-items: center;
-    }
-
-    .links{
-      float: right;
-      color: white;
-    }
-
     .bg3for3{
       background-image: url('./../assets/bg3for3.png');
       background-size: auto;
       background-repeat: no-repeat;
       margin-top: 50px;
-
-
-    }
-
-    .paddingimagesthree{
-      margin-left: 40px;
     }
 
     .screenshots{
@@ -1165,12 +1192,10 @@
     }
     .customButton{
       background-color: rgb(34, 80, 129);
-      width: 100%;
-      height: 45px;
       border-radius: 20px;
       margin-top: 30px;
-      text-align: center;
       display: block;
+      width: 100%;
       margin-left: auto;
       margin-right: auto;
     }
@@ -1211,8 +1236,8 @@
       margin-top: 20px;
       margin-left: auto;
       margin-right: auto;
-      width: 180px;
-      height: 75px;
+      width: 160px;
+      height: 70px;
     }
 
     .demoapps p{
@@ -1231,10 +1256,9 @@
     }
 
     .small{
-      display: block;
-      margin-right: auto;
       padding-left: 0px;
-      width: 350px;
+      padding-top: 20px;
+      width: 380px;
       height: 70px
     }
 
@@ -1246,8 +1270,9 @@
       display: block;
       margin-left: auto;
       margin-right: auto;
-      width: 100%;
-      padding-left: 50px;
+      width: 220px;
+      padding-left:0px;
+      padding-right: 0px;
     }
   }
 
@@ -1263,31 +1288,9 @@
       text-align: center;
     }
 
-    .head2{
-      margin-left: 100px;
-      color: white;
-      font-family: "Arial Rounded MT Bold";
-    }
-
-    .head3{
-      margin-top: 50px;
-      color: darkorange;
-      text-align: center;
-      font-size: 30px;
-      font-family: 'Ubuntu', sans-serif;
-    }
-
-    .img{
-      display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      background-image: url('./../assets/background.jpg');
-      background-size: auto;
-      padding-top: 50px;
-    }
-
     .firstcell{
       padding-top: 50px;
+      width: 300px
     }
 
     .frontimage{
@@ -1333,11 +1336,6 @@
       color: rgb(34, 80, 129);
     }
 
-    .textcenter{
-      margin-left: 150px;
-      margin-right: 50px;
-      padding-top: 70px;
-    }
 
 
     .centerimages{
@@ -1348,6 +1346,7 @@
     .parasilver{
       margin-top: 30px;
       color: #7f828b;
+      text-align: center;
     }
     .orangehead{
       text-align: center;
@@ -1372,11 +1371,6 @@
       padding-top: 180px;
     }
 
-    .reactnativetemplate{
-      margin-top: 100px;
-      /*margin-left: 100px;*/
-    }
-
     .reactnativetext{
       margin-top: 350px;
 
@@ -1395,23 +1389,7 @@
     .paymentgateways{
       padding-bottom: 50px;
     }
-    .alligning{
-      float: right;
-    }
 
-    .cardstemplate{
-      border: 2px solid black;
-      margin-left: 30px;
-      width: 600px;
-      border-top-color: orange;
-    }
-
-    .centered {
-      position: absolute;
-      top: 50%;
-      left: 60%;
-      transform: translate(-50%, -50%);
-    }
     .package{
       background: #FFFFFF;
       border-top: 5px solid darkorange;
@@ -1428,11 +1406,12 @@
     }
 
     .package .package-content button{
-      align-content: center;
-      margin-left: 150px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
       background-color: rgb(255, 144, 23);
-      font-size: 20px;
-      width: 150px;
+      font-size: 15px;
+      width: 120px;
       height: 40px;
       color: whitesmoke;
       border-radius: 20px;
@@ -1449,6 +1428,7 @@
       padding-bottom: 100px;
       padding-top: 30px;
       list-style: none;
+      padding-left: 0px;
     }
     .package .package-content ul li{
       text-align: center;
@@ -1472,6 +1452,10 @@
 
     .contactus{
       margin-top: 70px;
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+      width: 550px;
     }
 
 
@@ -1493,14 +1477,10 @@
       width: 100%;
     }
 
-    .appleandgoogle{
-      margin-top: 90px;
-      margin-bottom: 90px;
-    }
 
     .formpad{
       margin-top: 80px;
-      margin-right: 50px;
+      /*margin-right: 50px;*/
     }
 
     .bgscreenshots{
@@ -1512,17 +1492,6 @@
       background-position-y: 105px;
     }
 
-    .bgorange{
-      background-color: orangered;
-      align-content: center;
-      align-items: center;
-    }
-
-    .links{
-      float: right;
-      color: white;
-    }
-
     .bg3for3{
       background-image: url('./../assets/bg3for3.png');
       background-size: auto;
@@ -1530,9 +1499,6 @@
       margin-top: 50px;
     }
 
-    .paddingimagesthree{
-      margin-left: 40px;
-    }
 
     .screenshots{
       text-align: center;
@@ -1540,6 +1506,7 @@
 
     .bg3head{
       margin-top: 50px;
+      text-align: center;
     }
 
     .googlefont{
@@ -1640,29 +1607,6 @@
       text-align: center;
     }
 
-    .head2{
-      margin-left: 100px;
-      color: white;
-      font-family: "Arial Rounded MT Bold";
-    }
-
-    .head3{
-      margin-top: 50px;
-      color: darkorange;
-      text-align: center;
-      font-size: 30px;
-      font-family: 'Ubuntu', sans-serif;
-    }
-
-    .img{
-      display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      background-image: url('./../assets/background.jpg');
-      background-size: auto;
-      padding-top: 50px;
-    }
-
     .firstcell{
       padding-top: 50px;
     }
@@ -1683,8 +1627,6 @@
       background-image: url('./../assets/bg2.png');
       width: 100%;
     }
-
-
 
     .bg2 h1{
       color: white;
@@ -1710,13 +1652,6 @@
       font-family: 'Work Sans', sans-serif;
       color: rgb(34, 80, 129);
     }
-
-    .textcenter{
-      margin-left: 150px;
-      margin-right: 50px;
-      padding-top: 70px;
-    }
-
 
     .centerimages{
       margin-right: 0px;
@@ -1751,11 +1686,6 @@
       padding-top: 50px;
     }
 
-    .reactnativetemplate{
-      margin-top: 100px;
-      /*margin-left: 100px;*/
-    }
-
     .reactnativetext{
       margin-top: 50px;
     }
@@ -1772,29 +1702,18 @@
     }
 
     .paymentgateways{
-      padding-top: 70px;
-      margin-top: 50px;
-      padding-bottom: 200px;
       font-family: WorkSans;
     }
+    .paymentgateways div{
+      margin-top: 100px;
+    }
 
-    .alligning{
+    .paymentgateways p{
+      color: darkslategray;
+      font-size: 16px;
       float: right;
     }
 
-    .cardstemplate{
-      border: 2px solid black;
-      margin-left: 30px;
-      width: 600px;
-      border-top-color: orange;
-    }
-
-    .centered {
-      position: absolute;
-      top: 50%;
-      left: 60%;
-      transform: translate(-50%, -50%);
-    }
     .package{
       background: #FFFFFF;
       border-top: 5px solid darkorange;
@@ -1812,6 +1731,9 @@
 
     .package .package-content button{
       align-content: center;
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
       background-color: rgb(255, 144, 23);
       font-size: 20px;
       width: 120px;
@@ -1853,9 +1775,10 @@
     }
 
     .contactus{
-      margin-top: 70px;
-      align-content: center;
-      align-items: center;
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+      width: 750px;
     }
 
 
@@ -1876,15 +1799,12 @@
       width: 100%;
     }
 
-    .appleandgoogle{
-      margin-top: 90px;
-      margin-bottom: 90px;
-    }
 
     .formpad{
       margin-top: 80px;
-      margin-right: 50px;
+      margin-right: 0px;
     }
+
 
     .bgscreenshots{
       background-image: url('./../assets/screenshotbackgroun.png');
@@ -1895,17 +1815,6 @@
       background-position-y: 105px;
     }
 
-    .bgorange{
-      background-color: orangered;
-      align-content: center;
-      align-items: center;
-    }
-
-    .links{
-      float: right;
-      color: white;
-    }
-
     .bg3for3{
       background-image: url('./../assets/bg3for3.png');
       background-repeat: no-repeat;
@@ -1913,10 +1822,6 @@
       margin-top: 50px;
       margin-left: 0px;
       margin-right: 0px;
-    }
-
-    .paddingimagesthree{
-      margin-left: 40px;
     }
 
     .screenshots{
@@ -2016,9 +1921,32 @@
       color: rgb(34, 80, 129);
       font-family: 'Ubuntu', sans-serif;
     }
+    .small{
 
+      width: 350px;
+      height: 70px
+    }
 
+    .reactnative-image img{
+      margin-left: 0px;
+      margin-right: 0px;
+    }
   }
 
+  @media only screen and (min-width: 768px) {
+    .cd-top {
+      right: 20px;
+      bottom: 20px;
+    }
+  }
+
+  @media only screen and (min-width: 1024px) {
+    .cd-top {
+      height: 60px;
+      width: 60px;
+      right: 30px;
+      bottom: 30px;
+    }
+  }
 
 </style>

@@ -14,6 +14,13 @@
   export default {
     components: {
       Home
+    },
+    data(){
+      return{
+
+      }
+    },
+    methods: {
     }
   }
 </script>
