@@ -453,12 +453,16 @@
 
 
 
-    <div v-if="(mb > windowHeight+200)">
+    <div v-if="(mb > windowHeight+400)">
       <a
         class="topbutton"
-        href="#top"> Top  {{ ( mb > 1000 ) }}
+        href="#top">
+        <fa
+          icon="camera-retro"
+          size="3x"/> top
       </a>
     </div>
+
 
   </div>
 
@@ -478,32 +482,26 @@
     components: {
       Navbar
     },
+
     data() {
       return {
-        msg: 'Hello World! This is a Event listener test.',
         windowWidth: 0,
         windowHeight: 0,
-        mb: 7,
+        mb: 7, //offset
         height: 0,
       }
-
     },
 
 
     mounted() {
       window.onscroll = () => {
-
         var d = document.documentElement;
         var offset = d.scrollTop + window.innerHeight;
         var height = d.offsetHeight;
          this.mb = offset;
         this.height = height;
-        console.log("offset" + this.mb);
-        console.log("windowHeight" + this.windowHeight);
-        if (offset === height) {
-          console.log('At the bottom');
-        }
       },
+
 
       this.$nextTick(function() {
         window.addEventListener('resize', this.getWindowWidth);
@@ -529,6 +527,10 @@
          getWindowHeight(event) {
           this.windowHeight = document.documentElement.clientHeight;
         },
+
+
+
+
 
         topFunction: function () {
           document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
@@ -560,11 +562,13 @@
     position: fixed;
     background-color: silver;
     color: white;
-    bottom: 0px;
-    right: 0;
-    border-radius: 50%;
+    font-size: 20px;
+    bottom: 30px;
+    width: 50px;
+    height: 30px;
+    right: 20px;
+    border-radius: 20%;
     text-align: center;
-    padding-top: 15px;
   }
 
 
