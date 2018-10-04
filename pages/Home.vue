@@ -1,5 +1,9 @@
 <template>
   <div>
+
+    <!--<div class="css3-notification">-->
+    <!--<p>Hi, this is a notification and it bounces.</p>-->
+    <!--</div>-->
     <div
       id="top"
       class="frontimage js-cd-top">
@@ -7,7 +11,7 @@
       <div style="color: white; position: fixed">
         Window width: {{ windowWidth }}
         <br> Window height: {{ windowHeight }}
-        <br> Find Top: {{ findTop }}
+        <!--<br> Find Top: {{ findTop }}-->
       </div>
 
 
@@ -32,12 +36,11 @@
           <b-col
             sm="12"
             lg="6"
-            md="6"
-          >
+            md="6">
+
             <div
               style="padding-top: 80px"
-              @mouseover="upHere = true"
-              @mouseleave="upHere = false">
+              class="custom-links">
               <b-link
                 to="home"
                 style="color: white;">Home</b-link>
@@ -60,14 +63,15 @@
                 to="contactus"
                 style="color: white;">contact-us</b-link>
             </div>
-            <div
-              v-show="upHere"
-              class="dropdown">
-              <b-dropdown-item-button >I'm a button</b-dropdown-item-button>
-              <b-dropdown-item-button>I'm also a button</b-dropdown-item-button>
-              <b-dropdown-item-button disabled>I'm a button, but disabled!</b-dropdown-item-button>
-              <b-dropdown-item-button>I don't look like a button, but I am!</b-dropdown-item-button>
-            </div>
+
+            <!--<div-->
+            <!--v-show="upHere"-->
+            <!--class="dropdown">-->
+            <!--<b-dropdown-item-button >I'm a button</b-dropdown-item-button>-->
+            <!--<b-dropdown-item-button>I'm also a button</b-dropdown-item-button>-->
+            <!--<b-dropdown-item-button disabled>I'm a button, but disabled!</b-dropdown-item-button>-->
+            <!--<b-dropdown-item-button>I don't look like a button, but I am!</b-dropdown-item-button>-->
+            <!--</div>-->
             <img
               src="./../assets/frontimage.png"
               width="90%"
@@ -384,51 +388,70 @@
 
 
 
-            <b-col
-              class="formpad">
-              <b-row >
 
-                <b-col
-                  md="6"
-                  sm="12">
-                  <label>
-                    <b-form-input
-                      type="text"
-                      placeholder="Enter your name"
-                      class="roundinput"/>
-                  </label>
-                  <label>
-                    <b-form-input
-                      type="text"
-                      placeholder="Enter contact number"
-                      class="roundinput"/>
-                  </label>
-                </b-col>
+            <form @submit="onsubmitdata">
+              <b-col
+                class="formpad">
+                <b-row >
 
-                <b-col>
-                  <label>
-                    <b-form-input
-                      type="text"
-                      placeholder="Enter your email"
-                      class="roundinput"/>
-                  </label>
-                  <label>
-                    <b-form-input
-                      type="text"
-                      placeholder="subject"
-                      class="roundinput"/>
-                  </label>
-                </b-col>
+                  <b-col
+                    md="6"
+                    sm="12">
+                    <label>
+                      <b-form-input
+                        v-model="name"
+                        type="text"
+                        placeholder="Enter your name"
+                        class="roundinput"
+                        required/>
+                    </label>
+                    <label>
+                      <b-form-input
+                        v-model="contact"
+                        type="number"
+                        placeholder="Enter contact number"
+                        class="roundinput"
+                        required/>
+                    </label>
+                  </b-col>
 
-              </b-row>
-              <b-form-textarea
-                :rows="5"
-                :max-rows="8"
-                placeholder="Enter something"
-                class="roundinput"/>
-              <b-button class="customButton"> Send </b-button>
-            </b-col>
+                  <b-col>
+                    <label>
+                      <b-form-input
+                        v-model="email"
+                        type="text"
+                        placeholder="Enter your email"
+                        class="roundinput"
+                        required/>
+                    </label>
+                    <label>
+                      <b-form-input
+                        v-model="subject"
+                        type="text"
+                        placeholder="subject"
+                        class="roundinput"/>
+                    </label>
+                  </b-col>
+
+                </b-row>
+                <b-form-textarea
+                  v-model="mytextarea"
+                  :rows="5"
+                  :max-rows="8"
+                  placeholder="Enter something"
+                  class="roundinput"
+                  required/>
+                <b-button
+                  type="submit"
+                  class="customButton"> Send </b-button>
+              </b-col>
+
+            </form>
           </b-row>
+
+
+
+
         </b-container>
       </div>
 
@@ -447,36 +470,23 @@
     </div>
 
 
-
-    <!--<b-button @click="topFunction"> top </b-button>-->
-
-
-
-
     <div v-if="(mb > windowHeight+400)">
-      <a
-        class="topbutton"
-        href="#top">
-        <fa
-          icon="camera-retro"
-          size="3x"/> top
-      </a>
+      <div
+        v-if="show"
+        class="topbutton css3-notification">
+        <a
+          href="#top" >
+          top
+        </a>
+      </div>
     </div>
 
-
   </div>
-
-
 </template>
-
-
-
 
 <script>
 
-
   import Navbar from './Navbar.vue';
-
   export default {
 
     components: {
@@ -485,6 +495,15 @@
 
     data() {
       return {
+        name: '',
+        email: '',
+        contact: '',
+        subject: '',
+        mytextarea: '',
+        selected: null,
+        isShowing: false,
+        show: true,
+        show2: false,
         windowWidth: 0,
         windowHeight: 0,
         mb: 7, //offset
@@ -492,18 +511,16 @@
       }
     },
 
-
     mounted() {
       window.onscroll = () => {
         var d = document.documentElement;
         var offset = d.scrollTop + window.innerHeight;
         var height = d.offsetHeight;
          this.mb = offset;
-        this.height = height;
+         this.height = height;
       },
 
-
-      this.$nextTick(function() {
+        this.$nextTick(function() {
         window.addEventListener('resize', this.getWindowWidth);
         window.addEventListener('resize', this.getWindowHeight);
 
@@ -520,6 +537,20 @@
 
       methods: {
 
+        onsubmitdata(e){
+          console.log(this.name + '\n' + this.email + '\n' + this.contact + '\n' + this.subject + '\n' + this.mytextarea )
+          e.preventDefault();
+          this.name ="";
+          this.email ="";
+          this.contact ="";
+          this.subject ="";
+          this.mytextarea ="";
+        },
+
+        toggleShow() {
+          this.isShowing = !this.isShowing;
+        },
+
         getWindowWidth(event) {
           this.windowWidth = document.documentElement.clientWidth;
         },
@@ -528,20 +559,13 @@
           this.windowHeight = document.documentElement.clientHeight;
         },
 
+        // topFunction: function () {
+        //   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        // },
 
-
-
-
-        topFunction: function () {
-          document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-        },
-
-        scrollSmoothToBottom: function () {
-          window.scrollTo(0, 800);
-        },
-
-
-
+        // scrollSmoothToBottom: function () {
+        //   window.scrollTo(0, 800);
+        // },
   },
 
     }
@@ -553,24 +577,103 @@
   @import url('https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i');
   @import url('https://fonts.googleapis.com/css?family=Work+Sans');
 
-  #delay{
-    transition-delay: 2s;
+
+  @keyframes bounce {
+
+    0% {
+      transform:translateY(-100%);
+      opacity: 0;
+    }
+    5% {
+      transform:translateY(-100%);
+      opacity: 0;
+    }
+    15% {
+      transform:translateY(0);
+      padding-bottom: 5px;
+    }
+    30% {
+      transform:translateY(-50%);
+    }
+
+    40% {
+      transform:translateY(0%);
+      padding-bottom: 6px;
+    }
+
+    50% {
+      transform:translateY(-30%);
+    }
+
+    70% {
+      transform:translateY(0%);
+      padding-bottom: 7px;
+    }
+    80% {
+      transform:translateY(-15%);
+    }
+    90% {
+      transform:translateY(0%);
+      padding-bottom: 8px;
+    }
+    95% {
+      transform:translateY(-7%);
+    }
+    97% {
+      transform:translateY(0%);
+      padding-bottom: 9px;
+    }
+    99% {
+      transform:translateY(-3%);
+    }
+    100% {
+      transform:translateY(0);
+      padding-bottom: 9px;
+      opacity: 1;
+    }
   }
 
+
+  .css3-notification {
+
+    -webkit-animation: bounce 1.5s ease-out;
+    -moz-animation: bounce 1000ms ease-out;
+    -o-animation: bounce 1000ms ease-out;
+    animation: bounce 1.5s ease-out;
+  }
+
+  .bounce-enter-active {
+    animation: bounce-in .5s;
+  }
+  .bounce-leave-active {
+    animation: bounce-in .5s reverse;
+  }
+  @keyframes bounce-in {
+    0% {
+      transform: scale(0);
+    }
+    50% {
+      transform: scale(1.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
 
   .topbutton{
     position: fixed;
-    background-color: silver;
+    background-color: darkslategray;
     color: white;
+    text-transform: uppercase;
     font-size: 20px;
-    bottom: 30px;
-    width: 50px;
-    height: 30px;
-    right: 20px;
+    bottom: 20px;
+    width: 60px;
+    height: 35px;
+    right: 10px;
     border-radius: 20%;
     text-align: center;
-  }
 
+  }
 
   .head1{
     color: white;
@@ -885,6 +988,10 @@
     @import url('https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i');
     @import url('https://fonts.googleapis.com/css?family=Work+Sans');
 
+    .custom-links{
+     padding-top: 10px;
+    }
+
     .head1{
       color: white;
       font-family: WorkSans;
@@ -897,8 +1004,8 @@
     }
 
     .firstcell{
-      padding-top: 150px;
-      width: 100%;
+      padding-top: 20px;
+      width: 90%;
     }
 
     .frontimage{
