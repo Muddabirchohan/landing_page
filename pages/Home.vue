@@ -389,9 +389,11 @@
 
 
 
-            <form @submit="onsubmitdata">
-              <b-col
-                class="formpad">
+
+            <b-col
+              class="formpad">
+              <form @submit="onsubmitdata">
+
                 <b-row >
 
                   <b-col
@@ -428,11 +430,11 @@
                       <b-form-select
                         v-model="selected"
                         :options="options"
-                        class="roundinput" />
+                        class="roundinput"
+                        required/>
 
                     </label>
                   </b-col>
-
                 </b-row>
                 <b-form-textarea
                   v-model="mytextarea"
@@ -444,9 +446,10 @@
                 <b-button
                   type="submit"
                   class="customButton"> Send </b-button>
-              </b-col>
+              </form>
+            </b-col>
 
-            </form>
+
           </b-row>
 
 
@@ -547,10 +550,11 @@
         onsubmitdata(e){
           console.log(this.name + '\n' + this.email + '\n' + this.contact + '\n' + this.selected + '\n' + this.mytextarea )
           e.preventDefault();
-          this.name ="";
-          this.email ="";
-          this.contact ="";
-          this.mytextarea ="";
+          this.name = "";
+          this.email = "";
+          this.contact = "";
+          this.selected = null;
+          this.mytextarea = "";
         },
 
         toggleShow() {
@@ -565,13 +569,6 @@
           this.windowHeight = document.documentElement.clientHeight;
         },
 
-        // topFunction: function () {
-        //   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-        // },
-
-        // scrollSmoothToBottom: function () {
-        //   window.scrollTo(0, 800);
-        // },
   },
 
     }
