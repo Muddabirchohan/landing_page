@@ -409,7 +409,7 @@
                       <b-form-input
                         v-model="contact"
                         type="number"
-                        placeholder="Enter contact number"
+                        placeholder="Enter contact "
                         class="roundinput"
                         required/>
                     </label>
@@ -419,17 +419,17 @@
                     <label>
                       <b-form-input
                         v-model="email"
-                        type="text"
-                        placeholder="Enter your email"
+                        type="email"
+                        placeholder="Enter  email"
                         class="roundinput"
                         required/>
                     </label>
                     <label>
-                      <b-form-input
-                        v-model="subject"
-                        type="text"
-                        placeholder="subject"
-                        class="roundinput"/>
+                      <b-form-select
+                        v-model="selected"
+                        :options="options"
+                        class="roundinput" />
+
                     </label>
                   </b-col>
 
@@ -500,7 +500,6 @@
         contact: '',
         subject: '',
         mytextarea: '',
-        selected: null,
         isShowing: false,
         show: true,
         show2: false,
@@ -508,6 +507,14 @@
         windowHeight: 0,
         mb: 7, //offset
         height: 0,
+        selected: null,
+        options: [
+          { value: null, text: 'Please select an option' },
+          { value: 'a', text: 'This is First option' },
+          { value: 'b', text: 'Selected Option' },
+          { value: {'C': '3PO'}, text: 'This is an option with object value' },
+          { value: 'd', text: 'This one is disabled', disabled: true }
+        ]
       }
     },
 
@@ -538,12 +545,11 @@
       methods: {
 
         onsubmitdata(e){
-          console.log(this.name + '\n' + this.email + '\n' + this.contact + '\n' + this.subject + '\n' + this.mytextarea )
+          console.log(this.name + '\n' + this.email + '\n' + this.contact + '\n' + this.selected + '\n' + this.mytextarea )
           e.preventDefault();
           this.name ="";
           this.email ="";
           this.contact ="";
-          this.subject ="";
           this.mytextarea ="";
         },
 
@@ -576,8 +582,6 @@
 
   @import url('https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i');
   @import url('https://fonts.googleapis.com/css?family=Work+Sans');
-
-
   @keyframes bounce {
 
     0% {
