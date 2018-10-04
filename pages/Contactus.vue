@@ -1,6 +1,8 @@
 <template>
 
   <div>
+
+    <p> you have {{ myitems }} props </p>
     <form>
       <input
         v-model="name"
@@ -38,6 +40,7 @@
 </template>
 
 <script>
+
 
   export default {
     data() {

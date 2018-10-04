@@ -1,9 +1,6 @@
 <template>
   <div>
 
-    <!--<div class="css3-notification">-->
-    <!--<p>Hi, this is a notification and it bounces.</p>-->
-    <!--</div>-->
     <div
       id="top"
       class="frontimage js-cd-top">
@@ -11,11 +8,7 @@
       <div style="color: white; position: fixed">
         Window width: {{ windowWidth }}
         <br> Window height: {{ windowHeight }}
-        <!--<br> Find Top: {{ findTop }}-->
       </div>
-
-
-
       <!--<b-button-->
       <!--id="buttonfade"-->
       <!--@click="scrollSmoothToBottom"> bottom-->
@@ -45,33 +38,24 @@
                 to="home"
                 style="color: white;">Home</b-link>
               <b-link
-                to="features"
+                v-scroll-to="'#features'"
                 style="color: white;">Features</b-link>
               <b-link
-                to="screenshots"
+                v-scroll-to="'#screenshots'"
                 style="color: white;">Screenshots</b-link>
               <b-link
-                to="aboutus"
+                v-scroll-to="'#about'"
                 style="color: white;">About-us</b-link>
               <b-link
-                to="demowebapp"
+                v-scroll-to="'#demowebapp'"
                 style="color: white;">Demo WebApp</b-link>
               <b-link
-                to="packages"
+                v-scroll-to="'#packages'"
                 style="color: white;">packages</b-link>
               <b-link
-                to="contactus"
+                v-scroll-to="'#contactus'"
                 style="color: white;">contact-us</b-link>
             </div>
-
-            <!--<div-->
-            <!--v-show="upHere"-->
-            <!--class="dropdown">-->
-            <!--<b-dropdown-item-button >I'm a button</b-dropdown-item-button>-->
-            <!--<b-dropdown-item-button>I'm also a button</b-dropdown-item-button>-->
-            <!--<b-dropdown-item-button disabled>I'm a button, but disabled!</b-dropdown-item-button>-->
-            <!--<b-dropdown-item-button>I don't look like a button, but I am!</b-dropdown-item-button>-->
-            <!--</div>-->
             <img
               src="./../assets/frontimage.png"
               width="90%"
@@ -84,7 +68,9 @@
 
 
     <b-container >
-      <div class="about-us">
+      <div
+        id="about"
+        class="about-us">
         <h1> <b> ABOUT TRADEBAKERZ </b> </h1>
         <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing </p>
       </div>
@@ -141,7 +127,9 @@
     </b-container>
 
 
-    <div class="bgintuitive">
+    <div
+      id="features"
+      class="bgintuitive">
       <b-container>
         <b-row style="padding-bottom: 200px">
           <b-col>
@@ -196,8 +184,7 @@
                 <h2 >
                   <span class="orange reactnativetext googlefont"> <b> REACT NATIVE </b> </span> <br> <b class="textgooglenormal"> TEMPLATE </b>
                 </h2>
-                <p> There are many variations of passages of Lorem Ipsum available, <br> but the majority have suffered alteration in some form, by injected humour.
-                </p>
+                <p> Ready to use React Native template for IOS & Android just connect your api keys and you are good to go.just follow some simple steps to get configured </p>
               </div>
             </b-col>
           </b-row>
@@ -205,10 +192,9 @@
       </div>
     </div>
 
-
     <div>
       <b-container>
-        <b-row style="padding-bottom: 300px">
+        <b-row style="padding-bottom: 100px">
           <b-col
             lg="6"
             md="6"
@@ -275,6 +261,7 @@
         <b-row style="padding-bottom: 50px">
           <b-col>
             <div
+              id="packages"
               class="package">
               <div
                 class="package-content">
@@ -290,6 +277,9 @@
                   <li>
                     <span style="color: orange; font-size: 20px"> <b> ✓ </b> </span>  unlimited support and updating
                   </li>
+                  <li>
+                    <span style="color: orange; font-size: 20px"> <b> ✓ </b> </span>  Default desighn theme included
+                  </li>
                 </ul>
                 <b-button> Buy now</b-button>
               </div>
@@ -301,16 +291,12 @@
               <div class="package-content">
                 <h4> CUSTOM </h4>
                 <p> <b>  <sup>$ </sup> 199  </b>  </p>
-                <ul>
-                  <li>
-                    <span style="color: orange; font-size: 20px"> <b> ✓ </b> </span>  Full integration with woo commerce
-                  </li>
-                  <li>
-                    <span style="color: orange; font-size: 20px"> <b> ✓ </b> </span>  Full functional ios <br> and react native template
-                  </li>
-                  <li>
-                    <span style="color: orange; font-size: 20px"> <b> ✓ </b> </span>  unlimited support and updating
-                  </li>
+                <ul style="padding-bottom: 60px">
+                  <li> <span style="color: orange; font-size: 20px"> <b> ✓ </b> </span>  Custom theme desighn </li>
+                  <li> <span style="color: orange; font-size: 20px"> <b> ✓ </b> </span>  Custom feature addition  </li>
+                  <li> <span style="color: orange; font-size: 20px"> <b> ✓ </b> </span> Extra payment gateway integration </li>
+                  <li> <span style="color: orange; font-size: 20px"> <b> ✓ </b> </span> Web Landing Page Desighn & Hosting </li>
+                  <li> <span style="color: orange; font-size: 20px"> <b> ✓ </b> </span> Releasing to both Googleplay and Appstore  </li>
                 </ul>
                 <b-button> Contact Us </b-button>
               </div>
@@ -323,6 +309,7 @@
 
 
     <div
+      id="screenshots"
       class="bgscreenshots"
       style="padding-bottom: 100px">
       <div> <h1 class="screenshots "> SCREENSHOTS </h1></div>
@@ -331,8 +318,6 @@
         class="logotradebakerz">
       <img>
     </div>
-
-
 
     <div class="bg2">
       <div >
@@ -368,7 +353,9 @@
       </div>
     </div>
 
-    <div class="contactus">
+    <div
+      id="contactus"
+      class="contactus">
       <h1
         class="contactheading"
         style="text-align: center">
@@ -382,17 +369,14 @@
               sm="12">
               <img
                 src="./../assets/mapphone.png"
-                width="90%">
+                width="270px">
               <img>
             </b-col>
 
 
-
-
-
             <b-col
               class="formpad">
-              <form @submit="onsubmitdata">
+              <form @submit="onSubmit">
 
                 <b-row >
 
@@ -401,7 +385,7 @@
                     sm="12">
                     <label>
                       <b-form-input
-                        v-model="name"
+                        v-model="subjected.name"
                         type="text"
                         placeholder="Enter your name"
                         class="roundinput"
@@ -409,7 +393,7 @@
                     </label>
                     <label>
                       <b-form-input
-                        v-model="contact"
+                        v-model="subjected.contact"
                         type="number"
                         placeholder="Enter contact "
                         class="roundinput"
@@ -420,7 +404,7 @@
                   <b-col>
                     <label>
                       <b-form-input
-                        v-model="email"
+                        v-model="subjected.email"
                         type="email"
                         placeholder="Enter  email"
                         class="roundinput"
@@ -428,7 +412,7 @@
                     </label>
                     <label>
                       <b-form-select
-                        v-model="selected"
+                        v-model="subjected.selected"
                         :options="options"
                         class="roundinput"
                         required/>
@@ -437,7 +421,7 @@
                   </b-col>
                 </b-row>
                 <b-form-textarea
-                  v-model="mytextarea"
+                  v-model="subjected.mytextarea"
                   :rows="5"
                   :max-rows="8"
                   placeholder="Enter something"
@@ -448,19 +432,10 @@
                   class="customButton"> Send </b-button>
               </form>
             </b-col>
-
-
           </b-row>
-
-
-
-
         </b-container>
       </div>
-
     </div>
-
-
 
     <div class="bottomImage">
       <img
@@ -477,9 +452,10 @@
       <div
         v-if="show"
         class="topbutton css3-notification">
-        <a
-          href="#top" >
-          top
+        <a v-scroll-to="'#top'">
+          <img
+            src="./../assets/toparrow2.png"
+            width="30px">
         </a>
       </div>
     </div>
@@ -498,11 +474,14 @@
 
     data() {
       return {
-        name: '',
-        email: '',
-        contact: '',
-        subject: '',
-        mytextarea: '',
+
+        subjected: {
+          name: '',
+          email: '',
+          contact: '',
+          subject: '',
+          mytextarea: '',
+        },
         isShowing: false,
         show: true,
         show2: false,
@@ -547,16 +526,15 @@
 
       methods: {
 
-        onsubmitdata(e){
-          console.log(this.name + '\n' + this.email + '\n' + this.contact + '\n' + this.selected + '\n' + this.mytextarea )
+        onSubmit(e) {
+          for (var key in this.subjected) {
+            if (this.subjected.hasOwnProperty(key)) {
+              console.log(key + ":" + this.subjected[key]);
+              this.subjected[key] = null;
+            }
+          }
           e.preventDefault();
-          this.name = "";
-          this.email = "";
-          this.contact = "";
-          this.selected = null;
-          this.mytextarea = "";
         },
-
         toggleShow() {
           this.isShowing = !this.isShowing;
         },
@@ -573,7 +551,6 @@
 
     }
 </script>
-
 
 <style>
 
@@ -663,17 +640,15 @@
 
   .topbutton{
     position: fixed;
-    background-color: darkslategray;
     color: white;
     text-transform: uppercase;
     font-size: 20px;
-    bottom: 20px;
-    width: 60px;
-    height: 35px;
-    right: 10px;
+    bottom: 30px;
+    width: 50px;
+    height: 30px;
+    right: 0px;
     border-radius: 20%;
     text-align: center;
-
   }
 
   .head1{
@@ -1268,7 +1243,9 @@
       border-radius: 20px;
       margin-left: 20px;
       padding-left: 10px;
+      width: 100%;
     }
+
 
     .bgintuitive{
       background-image: url('./../assets/circle2.png');
@@ -1343,6 +1320,7 @@
   @media (min-width:768px ) and (max-width: 991px) {
     @import url('https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i');
     @import url('https://fonts.googleapis.com/css?family=Work+Sans');
+
 
     .head1{
       color: white;
@@ -1490,7 +1468,7 @@
     .package .package-content ul{
       margin: 0;
       padding-bottom: 100px;
-      padding-top: 30px;
+      padding-top: 10px;
       list-style: none;
       padding-left: 0px;
     }
@@ -1758,6 +1736,11 @@
       margin-top: 50px;
       padding-bottom: 50px;
     }
+
+
+    .textmarginreactnative p {
+      font-size: 20px;
+    }
     .unlimitedproductstext{
       margin-top: 100px;
       text-align: center;
@@ -1814,8 +1797,8 @@
 
     .package .package-content ul{
       margin: 0;
-      padding-bottom: 100px;
-      padding-top: 30px;
+      padding-bottom: 60px;
+      padding-top: 20px;
       list-style: none;
     }
     .package .package-content ul li{
@@ -1899,6 +1882,10 @@
     .googlefont{
       font-size: 50px;
       font-family: 'Ubuntu', sans-serif;
+    }
+
+    .googlefont p {
+      font-size: 20px;
     }
 
     .unlimitedproductspara{
