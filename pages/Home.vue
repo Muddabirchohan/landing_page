@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <div
       id="top"
       class="frontimage js-cd-top">
@@ -9,20 +8,19 @@
         Window width: {{ windowWidth }}
         <br> Window height: {{ windowHeight }}
       </div>
-      <!--<b-button-->
-      <!--id="buttonfade"-->
-      <!--@click="scrollSmoothToBottom"> bottom-->
-      <!--</b-button>-->
+
       <b-container>
         <b-row>
           <b-col
             sm="12"
             lg="6"
             md="6">
-            <img
-              src="./../assets/tradebakerzlogo.png"
-              class="logofront">
-            <img>
+            <nuxt-link to="./home">
+              <img
+                src="./../assets/tradebakerzlogo.png"
+                class="logofront">
+              <img>
+            </nuxt-link>
             <h1 class="head1"> <b> Instant WooCommerce <br> To React Native Mobile <br> Templates </b>
             </h1>
           </b-col>
@@ -32,30 +30,10 @@
             md="6">
 
             <div
-              style="padding-top: 80px"
-              class="custom-links">
-              <b-link
-                to="home"
-                style="color: white;">Home</b-link>
-              <b-link
-                v-scroll-to="'#features'"
-                style="color: white;">Features</b-link>
-              <b-link
-                v-scroll-to="'#screenshots'"
-                style="color: white;">Screenshots</b-link>
-              <b-link
-                v-scroll-to="'#about'"
-                style="color: white;">About-us</b-link>
-              <b-link
-                v-scroll-to="'#demowebapp'"
-                style="color: white;">Demo WebApp</b-link>
-              <b-link
-                v-scroll-to="'#packages'"
-                style="color: white;">packages</b-link>
-              <b-link
-                v-scroll-to="'#contactus'"
-                style="color: white;">contact-us</b-link>
+              style="padding-top: 100px">
+              <Navbar/>
             </div>
+
             <img
               src="./../assets/frontimage.png"
               width="90%"
@@ -147,7 +125,7 @@
             <div class="intuitive-image">
               <img
                 src="./../assets/doublecell.png"
-                width="100%"
+                width="80%"
                 class="margindouble">
               <img>
             </div>
@@ -155,7 +133,6 @@
         </b-row>
       </b-container>
     </div>
-
 
     <div
       class="reactnativetemplateimage"
@@ -367,8 +344,9 @@
         <b-container >
           <b-row>
             <b-col
-              md="6"
-              sm="12">
+              md="12"
+              sm="12"
+              lg="6">
               <img
                 src="./../assets/mapphone.png"
                 width="270px">
@@ -377,14 +355,13 @@
 
 
             <b-col
+              md="12"
+              sm="12"
+              lg="6"
               class="formpad">
               <form @submit="onSubmit">
-
                 <b-row >
-
-                  <b-col
-                    md="6"
-                    sm="12">
+                  <b-col>
                     <label>
                       <b-form-input
                         v-model="subjected.name"
@@ -976,19 +953,16 @@
     @import url('https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i');
     @import url('https://fonts.googleapis.com/css?family=Work+Sans');
 
-    .custom-links{
-     padding-top: 10px;
-    }
 
     .head1{
       color: white;
       font-family: WorkSans;
       font-size: 25px;
       display: block;
-      padding-top: 20px;
       margin-left: auto;
       margin-right: auto;
       text-align: center;
+      display: none;
     }
 
     .firstcell{
@@ -1013,6 +987,8 @@
       margin-left: 0;
       margin-right: 0;
     }
+
+
 
     .bg2 h1{
       color: white;
@@ -1080,7 +1056,12 @@
 
 
     .margindouble{
-      width: 350px;
+      width: 250px;
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: 0px;
+      padding-right: 0px;
     }
 
     .reactnativetext{
@@ -1253,8 +1234,8 @@
 
     .roundinput{
       border-radius: 20px;
-      margin-left: 20px;
-      padding-left: 10px;
+      margin-left: 0px;
+      padding-left:0px;
       width: 100%;
     }
 
@@ -1327,6 +1308,12 @@
       padding-left:0px;
       padding-right: 0px;
     }
+
+    .formpad{
+      margin-right: auto;
+      margin-left: auto;
+      display: block;
+    }
   }
 
   @media (min-width:768px ) and (max-width: 991px) {
@@ -1337,7 +1324,7 @@
     .head1{
       color: white;
       font-family: 'Ubuntu', sans-serif;
-      padding-top: 250px;
+      padding-top: 90px;
       font-size: 30px;
       text-align: center;
     }
@@ -1656,8 +1643,7 @@
     .head1{
       color: white;
       font-family: 'Ubuntu', sans-serif;
-      padding-top: 250px;
-      font-size: 45px;
+      font-size: 40px;
       text-align: center;
     }
 

@@ -1,36 +1,40 @@
 <template>
-  <div>
-    <div class="nav">
-      <b-navbar
-        toggleable
-        type="light"
-        variant="light">
-        <b-navbar-toggle
-          target="nav_text_collapse"/>
-        <!-- <b-navbar-brand>BootstrapVue</b-navbar-brand> -->
-        <b-collapse
-          id="nav_text_collapse"
-          is-nav>
-          <b-navbar-nav>
-            <nuxt-link to="/home">Home</nuxt-link>
-            <nuxt-link to="/features">Features</nuxt-link>
-            <nuxt-link to="/packages">Packages</nuxt-link>
-            <nuxt-link to="/screenshots">Screenshots</nuxt-link>
-            <nuxt-link to="/demoapp">Demo App</nuxt-link>
-            <nuxt-link to="/demowebapp">Demo Web App</nuxt-link>
-            <nuxt-link to="/contactus">Contact us</nuxt-link>
-          </b-navbar-nav>
-        </b-collapse>
-      </b-navbar>
-    </div>
-  </div>
+  <b-navbar
+    type="dark"
+    toggleable="md">
+
+    <b-navbar-toggle
+      target="nav_collapse"/>
+
+    <b-collapse
+      id="nav_collapse"
+      is-nav >
+
+      <b-navbar-nav>
+        <b-nav-item
+          to="home"
+          style="color: white;">Home</b-nav-item>
+        <b-nav-item
+          v-scroll-to="'#features'"
+          style="color: white;">Features</b-nav-item>
+        <b-nav-item
+          v-scroll-to="'#screenshots'"
+          style="color: white;">Screenshots</b-nav-item>
+        <b-nav-item
+          v-scroll-to="'#about'"
+          style="color: white;">About-us</b-nav-item>
+        <b-nav-item
+          v-scroll-to="'#demowebapp'"
+          style="color: white;">Demo WebApp</b-nav-item>
+        <b-nav-item
+          v-scroll-to="'#packages'"
+          style="color: white;">packages</b-nav-item>
+        <b-nav-item
+          v-scroll-to="'#contactus'"
+          style="color: white;">contact-us</b-nav-item>
+      </b-navbar-nav>
+
+    </b-collapse>
+  </b-navbar>
 </template>
 
-<style>
-.nav{
-float: right;
-margin-top: 20px;
-padding-left: 20px;
-background-color: cornflowerblue;
-}
-</style>
