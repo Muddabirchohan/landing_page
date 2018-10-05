@@ -319,7 +319,9 @@
       <img>
     </div>
 
-    <div class="bg2">
+    <div
+      id="demowebapp"
+      class="bg2">
       <div >
         <h1 > <b class="demo-head"> DEMO APPS DOWNLOAD </b> </h1>
         <b-row style="margin-right: 0px">
@@ -415,13 +417,19 @@
                         v-model="subjected.selected"
                         :options="options"
                         class="roundinput"
-                        required/>
+                        required>
+
+                        <template slot="first">
+                          <option :value="null">-- Please select an option --</option>
+                        </template>
+
+                      </b-form-select>
 
                     </label>
                   </b-col>
                 </b-row>
                 <b-form-textarea
-                  v-model="subjected.mytextarea"
+                  v-model="subjected.description"
                   :rows="5"
                   :max-rows="8"
                   placeholder="Enter something"
@@ -463,6 +471,9 @@
   </div>
 </template>
 
+
+
+
 <script>
 
   import Navbar from './Navbar.vue';
@@ -479,8 +490,8 @@
           name: '',
           email: '',
           contact: '',
-          subject: '',
-          mytextarea: '',
+          description: '',
+          selected: null,
         },
         isShowing: false,
         show: true,
@@ -489,13 +500,10 @@
         windowHeight: 0,
         mb: 7, //offset
         height: 0,
-        selected: null,
         options: [
-          { value: null, text: 'Please select an option' },
-          { value: 'a', text: 'This is First option' },
-          { value: 'b', text: 'Selected Option' },
-          { value: {'C': '3PO'}, text: 'This is an option with object value' },
-          { value: 'd', text: 'This one is disabled', disabled: true }
+          { value: 'a', text: 'Customization' },
+          { value: 'b', text: 'dynamic' },
+          { value: {'C': '3PO'}, text: 'workplace' },
         ]
       }
     },
@@ -527,6 +535,7 @@
       methods: {
 
         onSubmit(e) {
+
           for (var key in this.subjected) {
             if (this.subjected.hasOwnProperty(key)) {
               console.log(key + ":" + this.subjected[key]);
@@ -551,6 +560,9 @@
 
     }
 </script>
+
+
+
 
 <style>
 
